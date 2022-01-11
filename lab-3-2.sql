@@ -39,8 +39,7 @@
 -- | Washington Nationals          | 78.0             |
 -- +-------------------------------+------------------+
 
-SELECT name,
-AVG(wins)
+SELECT name, AVG(wins)
 FROM teams
 WHERE year > 2000 -- this probably should include 2000 no? but this is the right result
 GROUP BY name;
