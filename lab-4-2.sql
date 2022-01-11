@@ -24,4 +24,12 @@
 -- | Billy      | Hamilton  |
 -- | Ian        | Happ      |
 
+-- find teams.id from teams
+-- use teams.id from teams to get stats.player_ids
+-- use stats.player_id to get players.first_name and players.last_name
 
+select players.first_name, players.last_name
+from teams inner join stats on stats.team_id = teams.id 
+inner join players on players.id = stats.player_id
+where teams.name = "Chicago Cubs"
+and year = 2020;
